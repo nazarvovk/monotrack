@@ -130,7 +130,7 @@ function App() {
                 // some math to make the text fit
                 fontSize:
                   eurToUahString.length > 20
-                    ? `${80 / usdToUahString.length}rem`
+                    ? `${80 / eurToUahString.length}rem`
                     : '4rem',
               }}
             >
