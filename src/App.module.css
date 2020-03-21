@@ -1,0 +1,114 @@
+.app {
+  height: 100vh;
+  width: 100%;
+}
+.header {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 1rem;
+  user-select: none;
+  position: absolute;
+  min-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.headerTitle {
+  display: inline;
+  cursor: pointer;
+}
+.headerSubtitle {
+  display: inline;
+  margin-left: 0.5rem;
+}
+.monobankLogo {
+  fill: #ffffff;
+  height: 1.2rem;
+  margin-left: 0.5rem;
+  transform: translateY(30%);
+  cursor: pointer;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.currencyRow {
+  font-size: 4rem;
+  font-weight: 700;
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.currencyRow:last-child {
+  margin-bottom: 0;
+}
+input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 4rem;
+  margin-left: 0.5rem;
+  width: 270px;
+  font-weight: 700;
+  -moz-appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input:hover {
+  border-bottom: 2px solid #ffffff;
+  transition: all ease-in 0.1s;
+}
+input:focus {
+  outline: none;
+}
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 200px;
+  justify-content: space-around;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.updateIndicator {
+  position: fixed;
+  top: 0;
+  right: 2rem;
+}
+.convertedContainer {
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.converted {
+  margin-left: 2rem;
+}
+.converted::before {
+  content: '₴ ';
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  color: #b1b1b1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  max-width: 980px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+a{
+  color: #b1b1b1;
+}
