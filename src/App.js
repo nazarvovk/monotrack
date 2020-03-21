@@ -129,7 +129,7 @@ function App() {
               style={{
                 // some math to make the text fit
                 fontSize:
-                  usdToUahString.length > 20
+                  eurToUahString.length > 20
                     ? `${80 / usdToUahString.length}rem`
                     : '4rem',
               }}
