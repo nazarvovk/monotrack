@@ -1,5 +1,4 @@
 .app {
-  height: 100vh;
   width: 100%;
 }
 .header {
@@ -19,6 +18,7 @@
 .headerSubtitle {
   display: inline;
   margin-left: 0.5rem;
+  white-space: nowrap;
 }
 .monobankLogo {
   fill: #ffffff;
@@ -27,21 +27,20 @@
   transform: translateY(30%);
   cursor: pointer;
 }
-
 .container {
+  width: 100%;
   max-width: 980px;
-  margin: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .currencyRow {
-  font-size: 4rem;
+  font-size: 10vmin;
   font-weight: 700;
+  padding: 0 5vmin;
   display: flex;
-  white-space: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 4rem;
 }
 .currencyRow:last-child {
@@ -51,10 +50,11 @@ input {
   background: none;
   border: none;
   color: white;
-  font-size: 4rem;
+  font-size: 10vmin;
   margin-left: 0.5rem;
-  width: 270px;
+  max-width: 270px;
   font-weight: 700;
+  width: 100%;
   -moz-appearance: none;
 }
 input::-webkit-outer-spin-button,
@@ -70,6 +70,7 @@ input:focus {
 }
 .loaderContainer {
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   position: absolute;
@@ -84,8 +85,13 @@ input:focus {
   top: 0;
   right: 2rem;
 }
+.currencyInputContainer{
+  width: 30%;
+  white-space: nowrap;
+}
 .convertedContainer {
-  height: 4rem;
+  width: 70%;
+  text-align: end;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,6 +115,15 @@ footer{
   left: 50%;
   transform: translateX(-50%);
 }
+footer :last-child{
+  text-align: end;
+}
 a{
   color: #b1b1b1;
+}
+
+@media screen and (min-width: 900px){
+  .currencyRow{
+    padding: 0;
+  }
 }

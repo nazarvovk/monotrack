@@ -89,7 +89,7 @@ function App() {
 
       <div className={styles.container}>
         <div className={styles.currencyRow}>
-          <div>
+          <div className={styles.currencyInputContainer}>
             <span>$</span>
             <input
               type='number'
@@ -105,8 +105,8 @@ function App() {
                 // some math to make the text fit
                 fontSize:
                   usdToUahString.length > 20
-                    ? `${80 / usdToUahString.length}rem`
-                    : '4rem',
+                    ? `${160 / usdToUahString.length}vmin`
+                    : '8vmin',
               }}
             >
               {usdToUahString}
@@ -114,7 +114,7 @@ function App() {
           </div>
         </div>
         <div className={styles.currencyRow}>
-          <div>
+          <div className={styles.currencyInputContainer}>
             €
             <input
               type='number'
@@ -130,8 +130,8 @@ function App() {
                 // some math to make the text fit
                 fontSize:
                   eurToUahString.length > 20
-                    ? `${80 / eurToUahString.length}rem`
-                    : '4rem',
+                    ? `${160 / eurToUahString.length}vmin`
+                    : '8vmin',
               }}
             >
               {eurToUahString}
