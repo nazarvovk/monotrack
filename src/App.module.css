@@ -127,3 +127,10 @@ a{
     padding: 0;
   }
 }
+
+.adContainer{
+  position: absolute;
+  bottom: 72px;
+  width: 100%;
+  min-height: 90px;
+}

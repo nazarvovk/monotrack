@@ -15,18 +15,18 @@ async function getCurrencies(retryTimeout = 1000) {
     const allCurrencies = await response.json();
     return {
       usd: allCurrencies.find(
-        e =>
+        (e) =>
           e.currencyCodeB === CURRENCY_CODES.UAH &&
           e.currencyCodeA === CURRENCY_CODES.USD
       ),
       eur: allCurrencies.find(
-        e =>
+        (e) =>
           e.currencyCodeB === CURRENCY_CODES.UAH &&
           e.currencyCodeA === CURRENCY_CODES.EUR
       ),
     };
   } else {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         getCurrencies(retryTimeout * 2).then(resolve);
       }, retryTimeout);
@@ -44,10 +44,10 @@ function App() {
       .then(() => setIsUpdating(false));
   };
   useEffect(update, []);
-  
+
   // update every 2 minutes
   useInterval(update, 60000 * 2);
-  
+
   const [usd, setUsd] = useState(1);
   const [eur, setEur] = useState(1);
   if (!currencies) {
@@ -95,7 +95,7 @@ function App() {
               type='number'
               min='0'
               value={usd}
-              onChange={e => setUsd(e.target.value)}
+              onChange={(e) => setUsd(e.target.value)}
             />
           </div>
           <div className={styles.convertedContainer}>
@@ -120,7 +120,7 @@ function App() {
               type='number'
               min='0'
               value={eur}
-              onChange={e => setEur(e.target.value)}
+              onChange={(e) => setEur(e.target.value)}
             />
           </div>
           <div className={styles.convertedContainer}>
@@ -137,6 +137,20 @@ function App() {
               {eurToUahString}
             </span>
           </div>
+        </div>
+      </div>
+      <div className={styles.adContainer}>
+        <div id='728533546'>
+          <script type='text/javascript'>
+            {`
+              try {
+                  window._mNHandle.queue.push(function (){
+                      window._mNDetails.loadTag("728533546", "970x90", "728533546");
+                  });
+              }
+              catch (error) {}
+          `}
+          </script>
         </div>
       </div>
       <footer>
