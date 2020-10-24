@@ -1,0 +1,13 @@
+{
+  "name": "monotrack-lambda",
+  "version": "1.0.0",
+  "main": "push.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node push.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "web-push": "^3.4.4"
+  }
+}

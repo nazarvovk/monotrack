@@ -51,3 +51,16 @@ export function formatMoney(
     console.log(e);
   }
 }
+
+export const subscribeToPush = async () => {
+  const sw = await navigator.serviceWorker.ready;
+  console.log(
+    'process.env.REACT_APP_PUSH_PUBLIC_KEY: ',
+    process.env.REACT_APP_PUSH_PUBLIC_KEY
+  );
+  const push = await sw.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: process.env.REACT_APP_PUSH_PUBLIC_KEY,
+  });
+  console.log(JSON.stringify(push))
+};

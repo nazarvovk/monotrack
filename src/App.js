@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import MonobankLogo from './MonobankLogo';
-import { useInterval, formatMoney } from './utils';
+import { useInterval, formatMoney, subscribeToPush } from './utils';
 import LoadingScreen from './LoadingScreen';
 
 const CURRENCY_CODES = {
@@ -47,6 +47,10 @@ function App() {
 
   // update every 2 minutes
   useInterval(update, 60000 * 2);
+
+  useEffect(() => {
+    subscribeToPush();
+  }, []);
 
   const [usd, setUsd] = useState(1);
   const [eur, setEur] = useState(1);
@@ -137,20 +141,6 @@ function App() {
               {eurToUahString}
             </span>
           </div>
-        </div>
-      </div>
-      <div className={styles.adContainer}>
-        <div id='728533546'>
-          <script type='text/javascript'>
-            {`
-              try {
-                  window._mNHandle.queue.push(function (){
-                      window._mNDetails.loadTag("728533546", "970x90", "728533546");
-                  });
-              }
-              catch (error) {}
-          `}
-          </script>
         </div>
       </div>
       <footer>
